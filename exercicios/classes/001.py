@@ -22,7 +22,8 @@ print(circulo_primeiro.mostra_cor())
 print(circulo_segundo.mostra_cor())
 
 circulo_segundo.troca_cor('Amarelo')
-print(circulo_primeiro.cor, circulo_segundo.cor)
+print(circulo_primeiro.mostra_cor())
+print(circulo_segundo.mostra_cor())
 
 
 
