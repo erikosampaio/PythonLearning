@@ -1,4 +1,4 @@
-# Classe Bichinho Virtual:Crie uma classe que modele um Tamagushi (Bichinho Eletrônico):
+# Classe Bichinho Virtual: Crie uma classe que modele um Tamagushi (Bichinho Eletrônico):
 
 # a. Atributos: Nome, Fome, Saúde e Idade
 # b. Métodos: Alterar Nome, Fome, Saúde e Idade; Retornar Nome, Fome, Saúde Idade
@@ -46,21 +46,46 @@ class BichinhoVirtual:
         return f'Seu baby está bem!'
 
 
-tamagushi = BichinhoVirtual('Yoshi', 0, 10, 2)
+tamagushi = BichinhoVirtual('Yoshi', 5, 2, 1)
+print(f'Nome: {tamagushi.mostra_nome()}')
+print(f'Saúde: {tamagushi.mostra_saude()}')
+print(f'Fome: {tamagushi.mostra_fome()}')
+print(f'Idade: {tamagushi.mostra_idade()}')
+print()
 
-print(f'Nome: {tamagushi.nome}')
-print(f'Saúde: {tamagushi.saude}')
-print(f'Fome: {tamagushi.fome}')
-print(f'Idade: {tamagushi.idade}')
-print(tamagushi.humor())
+print('Menu: Digite uma letra para sair!')
+while True:
+    try:
+        print('\t1 -> Alterar nome: ')
+        print('\t2 -> Alterar saúde: ')
+        print('\t3 -> Alterar fome: ')
+        print('\t4 -> Alterar idade: ')
+        escolha = int(input('\tEscolha: '))
+        if escolha == 1:
+            nome = input("Informe o novo nome: ")
+            tamagushi.alterar_nome(nome)
+            print(f'Nome: {tamagushi.mostra_nome()}\n')
+        elif escolha == 2:
+            saude = int(input("Informe o valor da saude: "))
+            tamagushi.alterar_saude(saude)
+            print(f'Saúde: {tamagushi.mostra_saude()}\n')
+        elif escolha == 3:
+            fome = int(input("Informe o valor da fome: "))
+            tamagushi.alterar_fome(fome)
+            print(f'Fome: {tamagushi.mostra_fome()}\n')
+        elif escolha == 4:
+            idade = int(input("Informe o valor da idade: "))
+            tamagushi.alterar_idade(idade)
+            print(f'Idade: {tamagushi.mostra_idade()}\n')
+        else:
+            print('Informe um número válido!')
+            print()
+    except ValueError:
+        break
 
-tamagushi.alterar_nome('Izzy')
-tamagushi.alterar_saude(5)
-tamagushi.alterar_fome(7)
-tamagushi.alterar_idade(3)
-
-print(f'Nome: {tamagushi.nome}')
-print(f'Saúde: {tamagushi.saude}')
-print(f'Fome: {tamagushi.fome}')
-print(f'Idade: {tamagushi.idade}')
-print(tamagushi.humor())
+print()
+print(f'Nome: {tamagushi.mostra_nome()}')
+print(f'Saúde: {tamagushi.mostra_saude()}')
+print(f'Fome: {tamagushi.mostra_fome()}')
+print(f'Idade: {tamagushi.mostra_idade()}')
+print('Programa finalizado!')
