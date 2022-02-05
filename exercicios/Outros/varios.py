@@ -378,4 +378,3 @@ while nome != '':
     nome = nome[:-1]   # Imprime nome regressivamente
 """
 
-
