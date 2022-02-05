@@ -1,4 +1,4 @@
-# Classe Ponto e Retangulo: Faça um programa completo utilizando funções e classes que:
+# Classe Ponto e Retangulo: Faça um programa completo utilizando funções e 8_classes que:
 
 # Possua uma classe chamada Ponto, com os atributos x e y.
 # Possua uma classe chamada Retangulo, com os atributos largura e altura.
